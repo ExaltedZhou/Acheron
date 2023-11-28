@@ -17,6 +17,10 @@
 		A2D340A22B0AF04D0057B90E /* CKpost.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D340A12B0AF04D0057B90E /* CKpost.swift */; };
 		A2D340A42B0AF18C0057B90E /* post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D340A32B0AF18C0057B90E /* post.swift */; };
 		A2D340A82B0BA8210057B90E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D340A72B0BA8210057B90E /* MapView.swift */; };
+		A2D340BC2B14DE9E0057B90E /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D340BB2B14DE9E0057B90E /* ToggleView.swift */; };
+		A2D340BE2B14EBB70057B90E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D340BD2B14EBB70057B90E /* ProfileView.swift */; };
+		A2D340C02B14F0EB0057B90E /* PostDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D340BF2B14F0EB0057B90E /* PostDetail.swift */; };
+		A2D340C22B14F3DD0057B90E /* CommentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D340C12B14F3DD0057B90E /* CommentRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		A2D340A12B0AF04D0057B90E /* CKpost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKpost.swift; sourceTree = "<group>"; };
 		A2D340A32B0AF18C0057B90E /* post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = post.swift; sourceTree = "<group>"; };
 		A2D340A72B0BA8210057B90E /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		A2D340BB2B14DE9E0057B90E /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
+		A2D340BD2B14EBB70057B90E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		A2D340BF2B14F0EB0057B90E /* PostDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetail.swift; sourceTree = "<group>"; };
+		A2D340C12B14F3DD0057B90E /* CommentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,12 +75,16 @@
 				A2D3409C2B0AE95E0057B90E /* rumor.entitlements */,
 				A2D3408A2B0AE2DF0057B90E /* rumorApp.swift */,
 				A2D3408C2B0AE2DF0057B90E /* ContentView.swift */,
+				A2D340BB2B14DE9E0057B90E /* ToggleView.swift */,
 				A2D3409A2B0AE92B0057B90E /* HomeView.swift */,
+				A2D340BF2B14F0EB0057B90E /* PostDetail.swift */,
+				A2D340C12B14F3DD0057B90E /* CommentRow.swift */,
 				A2D340A72B0BA8210057B90E /* MapView.swift */,
 				A2D3409D2B0AEDC40057B90E /* PostViewModel.swift */,
 				A2D3409F2B0AEF4A0057B90E /* postRow.swift */,
 				A2D340A12B0AF04D0057B90E /* CKpost.swift */,
 				A2D340A32B0AF18C0057B90E /* post.swift */,
+				A2D340BD2B14EBB70057B90E /* ProfileView.swift */,
 				A2D340902B0AE2E10057B90E /* Assets.xcassets */,
 				A2D340922B0AE2E10057B90E /* Preview Content */,
 			);
@@ -157,13 +169,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2D340C02B14F0EB0057B90E /* PostDetail.swift in Sources */,
 				A2D3409E2B0AEDC40057B90E /* PostViewModel.swift in Sources */,
+				A2D340C22B14F3DD0057B90E /* CommentRow.swift in Sources */,
 				A2D3408D2B0AE2DF0057B90E /* ContentView.swift in Sources */,
+				A2D340BE2B14EBB70057B90E /* ProfileView.swift in Sources */,
 				A2D340A02B0AEF4A0057B90E /* postRow.swift in Sources */,
 				A2D340A42B0AF18C0057B90E /* post.swift in Sources */,
 				A2D3409B2B0AE92B0057B90E /* HomeView.swift in Sources */,
 				A2D3408B2B0AE2DF0057B90E /* rumorApp.swift in Sources */,
 				A2D340A82B0BA8210057B90E /* MapView.swift in Sources */,
+				A2D340BC2B14DE9E0057B90E /* ToggleView.swift in Sources */,
 				A2D340A22B0AF04D0057B90E /* CKpost.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,7 +328,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ok.rumor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -343,7 +359,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ok.rumor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

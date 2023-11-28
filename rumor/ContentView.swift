@@ -29,16 +29,23 @@ struct ContentView: View {
     @State
     private var userEmail:String=""
     var body: some View {
-        ZStack{
-            Color.white
-            if userName.isEmpty{
-                SignInWithAppleButton(.signIn, onRequest:onRequest, onCompletion:onCompletion).signInWithAppleButtonStyle(.black)
-                    .frame(width:300,height:50)
-            } else{
-                HomeView(userName:userName)
+            
+    VStack{
+        // Color.blue
+        if userName.isEmpty{
+            Image("figlog")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+            .frame(width:70, height: 70)
+            SignInWithAppleButton(.signIn, onRequest:onRequest, onCompletion:onCompletion).signInWithAppleButtonStyle(.black)
+                .frame(width:300,height:50)
+        } else{
+            ToggleView(userName:userName)
+            
             }
-        }
-        .onAppear(perform:onAppear)
+    }
+            .onAppear(perform:onAppear)
+      
     }
     
     private func onRequest(_ request: ASAuthorizationAppleIDRequest){

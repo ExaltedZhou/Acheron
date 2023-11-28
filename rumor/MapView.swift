@@ -7,17 +7,24 @@
 
 import SwiftUI
 import MapKit
-//extension CLLocationCoordinate2D{
-   // static let BatonRouge = CLLocationCoordinate2D(latitude: 30.4515, longitude: -91.1871)
 
-//}
 struct MapView: View {
-   @State private var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 30.4515, longitude: -91.1871), span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
+    var lt:Double
+    var ln:Double
+   @State private var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 30.4515, longitude: -91.1871), span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1))
+    struct Marker:Identifiable{
+        let id=UUID()
+        var location:MapMarker
+    }
     var body: some View {
-            Map(coordinateRegion: $mapRegion).navigationTitle("Map")
+        let coordinate=CLLocationCoordinate2D(latitude:lt, longitude: ln)
+        let markers = [Marker(location:MapMarker(coordinate:coordinate))]
+            
+        Map(coordinateRegion: $mapRegion,annotationItems: markers){marker in marker.location}
+      //  .edgesIgnoringSafeArea(.all)
     }
 }
 
 #Preview {
-    MapView()
+    MapView(lt: 30.4515, ln: -91.1971)
 }

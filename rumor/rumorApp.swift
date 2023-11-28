@@ -13,7 +13,7 @@ struct rumorApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(posts())
+            ContentView().environmentObject(PostViewModel())
         }
     }
 }
