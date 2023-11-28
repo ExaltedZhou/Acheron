@@ -22,8 +22,7 @@ struct PostDetail: View {
         usState(StateName:"TX",cities:[usCity(CityName:"Houston",lt:29.75,ln:-95.358),
                                        usCity(CityName: "Austin", lt: 30.3, ln: 97.7)]),
         usState(StateName: "NY", cities: [usCity(CityName: "New York City", lt: 40.73, ln: 73.94)]),
-        usState(StateName: "CA", cities: [usCity(CityName: "Los Angeles", lt: 34, ln: 118.2),
-                                          usCity(CityName: "San Diegos", lt: 32.7, ln: 117.2)])]
+        usState(StateName: "CA", cities: [usCity(CityName: "Los Angeles", lt: 34, ln: 118.2)])]
     
     var body: some View {
         VStack {
@@ -43,7 +42,7 @@ struct PostDetail: View {
                         .toolbar{
                             Text("Hi, \(userName)")
                                 .foregroundColor(.accentColor)
-                        }.searchable(text:$searchText)
+                        }.searchable(text:$vm.searchText)
                         .accessibilityLabel("search")
        
         Spacer()
@@ -52,7 +51,7 @@ struct PostDetail: View {
                     .focused($nameIsFocused)
                     .foregroundColor(.accentColor)
                     .border(.secondary)
-                    .padding()
+                 //   .padding()
                 
                 Menu{
                     ForEach(usStates){usState in
@@ -72,7 +71,7 @@ struct PostDetail: View {
                 }label:{
                     Label("",systemImage: "location.north.fill")
                 }
-                Spacer()
+               // Spacer()
                 Button(action:{
                     nameIsFocused=false
                     vm.post.title="\(subPost.postContent)\(subPost.time)"
@@ -84,7 +83,7 @@ struct PostDetail: View {
                     }
                     userInput=""
                 }){
-                    Image(systemName:"square.and.arrow.up")
+                    Image(systemName:"arrowshape.up.circle.fill")
                 }.disabled(userInput.isEmpty)
             }.padding().navigationTitle("Comments")
         }

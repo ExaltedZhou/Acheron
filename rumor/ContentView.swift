@@ -39,6 +39,7 @@ struct ContentView: View {
             .frame(width:70, height: 70)
             SignInWithAppleButton(.signIn, onRequest:onRequest, onCompletion:onCompletion).signInWithAppleButtonStyle(.black)
                 .frame(width:300,height:50)
+        
         } else{
             ToggleView(userName:userName)
             

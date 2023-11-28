@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A218D2DF2B15813B00981322 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A218D2DE2B15813B00981322 /* Launch Screen.storyboard */; };
 		A2D3408B2B0AE2DF0057B90E /* rumorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D3408A2B0AE2DF0057B90E /* rumorApp.swift */; };
 		A2D3408D2B0AE2DF0057B90E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D3408C2B0AE2DF0057B90E /* ContentView.swift */; };
 		A2D340912B0AE2E10057B90E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2D340902B0AE2E10057B90E /* Assets.xcassets */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A218D2DE2B15813B00981322 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		A218D2E02B1589E600981322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A2D340872B0AE2DF0057B90E /* rumor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rumor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D3408A2B0AE2DF0057B90E /* rumorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rumorApp.swift; sourceTree = "<group>"; };
 		A2D3408C2B0AE2DF0057B90E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +75,7 @@
 		A2D340892B0AE2DF0057B90E /* rumor */ = {
 			isa = PBXGroup;
 			children = (
+				A218D2E02B1589E600981322 /* Info.plist */,
 				A2D3409C2B0AE95E0057B90E /* rumor.entitlements */,
 				A2D3408A2B0AE2DF0057B90E /* rumorApp.swift */,
 				A2D3408C2B0AE2DF0057B90E /* ContentView.swift */,
@@ -85,6 +89,7 @@
 				A2D340A12B0AF04D0057B90E /* CKpost.swift */,
 				A2D340A32B0AF18C0057B90E /* post.swift */,
 				A2D340BD2B14EBB70057B90E /* ProfileView.swift */,
+				A218D2DE2B15813B00981322 /* Launch Screen.storyboard */,
 				A2D340902B0AE2E10057B90E /* Assets.xcassets */,
 				A2D340922B0AE2E10057B90E /* Preview Content */,
 			);
@@ -157,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A218D2DF2B15813B00981322 /* Launch Screen.storyboard in Resources */,
 				A2D340942B0AE2E10057B90E /* Preview Assets.xcassets in Resources */,
 				A2D340912B0AE2E10057B90E /* Assets.xcassets in Resources */,
 			);
@@ -318,9 +324,10 @@
 				DEVELOPMENT_TEAM = M433G53ZR4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = rumor/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
@@ -328,7 +335,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ok.rumor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -349,9 +356,10 @@
 				DEVELOPMENT_TEAM = M433G53ZR4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = rumor/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
@@ -359,7 +367,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ok.rumor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

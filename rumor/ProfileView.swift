@@ -17,6 +17,8 @@ struct ProfileView: View {
             Text("Profile")
                 .font(.headline)
             Text("Name: \(userName)")
+            Text("My posts")
+                .background(.blue)
             List(vm.postMains){
                 postMain in
                 postRow(postMain: postMain)

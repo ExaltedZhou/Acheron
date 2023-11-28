@@ -33,7 +33,10 @@ struct HomeView: View {
     private let usStates:[usState]=[
         usState(StateName:"LA",cities:[usCity(CityName:"Baton Rouge",lt:30,ln:-91),
                                        usCity(CityName:"New Orleans",lt:30.07,ln:-89.93)]),
-        usState(StateName:"TX",cities:[usCity(CityName:"Houston",lt:29.75,ln:-95.358)])]
+        usState(StateName:"TX",cities:[usCity(CityName:"Houston",lt:29.75,ln:-95.358),
+                                       usCity(CityName: "Austin", lt: 30.3, ln: -97.7)]),
+        usState(StateName: "NY", cities: [usCity(CityName: "New York City", lt: 40.73, ln: -73.94)]),
+        usState(StateName: "CA", cities: [usCity(CityName: "Los Angeles", lt: 34, ln: -118.2)])]
     var body: some View {
         NavigationView{
             VStack{
@@ -95,7 +98,7 @@ struct HomeView: View {
                         }
                         userInput=""
                     }){
-                        Image(systemName:"square.and.arrow.up")
+                        Image(systemName:"arrowshape.up.circle.fill")
                     }.disabled(userInput.isEmpty)
                 }
                 
