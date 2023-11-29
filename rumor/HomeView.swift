@@ -98,7 +98,7 @@ struct HomeView: View {
                         }
                         userInput=""
                     }){
-                        Image(systemName:"arrowshape.up.circle.fill")
+                        Image(systemName:"arrowshape.turn.up.forward.circle.fill")
                     }.disabled(userInput.isEmpty)
                 }
                 

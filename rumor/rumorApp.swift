@@ -17,3 +17,6 @@ struct rumorApp: App {
         }
     }
 }
+/*
+Image(systImage(systemName: "arrowshape.turn.up.forward.circle.fill")emName: "arrowshape.turn.up.right.circle.fill")
+*/

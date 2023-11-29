@@ -12,5 +12,7 @@
 			<string>figlog</string>
 		</dict>
 	</dict>
+	<key>UIRequiresPersistentWiFi</key>
+	<true/>
 </dict>
 </plist>
