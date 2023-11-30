@@ -1,0 +1,79 @@
+import Foundation
+import CloudKit
+import Combine
+
+struct Message: Codable {
+    let conversationId: String
+    let sender: String
+    let text: String
+    let timestamps: Date
+
+    enum CodingKeys: String, CodingKey {
+        case conversationId
+        case sender
+        case text
+        case timestamps
+    }
+}
+
+/*
+
+If the first one doesn't work try this
+
+import UIKit
+
+class MessageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var messageTextField: UITextField!
+    
+    struct Message {
+        let content: String
+        let timestamp: Date
+    }
+    
+    var messages: [Message] = []
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Set up table view
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        // Register custom cell if needed
+        // tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+    }
+
+    // MARK: - UITableViewDataSource
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let message = messages[indexPath.row]
+        cell.textLabel?.text = "\(message.content) - \(formattedDate(message.timestamp))"
+        return cell
+    }
+    
+    // MARK: - IBActions
+    
+    @IBAction func sendMessage(_ sender: UIButton) {
+        if let messageText = messageTextField.text, !messageText.isEmpty {
+            let message = Message(content: messageText, timestamp: Date())
+            messages.append(message)
+            tableView.reloadData()
+            messageTextField.text = ""
+        }
+    }
+    
+    // MARK: - Helper Methods
+    
+    func formattedDate(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm:ss"
+        return dateFormatter.string(from: date)
+    }
+}*/

@@ -48,12 +48,12 @@ struct HomeView: View {
                     postRow(postMain:postMain)
                     
                 }
-                }.navigationTitle("rumor")
+                }.navigationTitle("Rumor")
                     .refreshable{
-                        await vm.load(title:"home")
+                        await vm.load(title:"Home")
                     }.onAppear{
                         Task{
-                            await vm.load(title:"home")
+                            await vm.load(title:"Home")
                         }
                     }
                     .accessibilityElement(children: .combine)
@@ -89,7 +89,7 @@ struct HomeView: View {
                     Spacer()
                     Button(action:{
                         nameIsFocused=false
-                        vm.post.title="home"
+                        vm.post.title="Home"
                         vm.post.postContent=userInput
                         vm.post.time=Date()
                         vm.post.user=userName
@@ -110,5 +110,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView(userName: "rumor").environmentObject(PostViewModel())
+    HomeView(userName: "Rumor").environmentObject(PostViewModel())
 }
